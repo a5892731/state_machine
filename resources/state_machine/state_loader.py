@@ -26,8 +26,9 @@ class StateLoader(object): #in Karen project is a SimpleDevice class
         delegated to the given states which then handle the event. The result is
         then assigned as the new state.
         """
-        # The next state will be the result of the on_event function.
+        #
 
+        # The next state will be the result of the on_event function.
         self.state = self.state.on_event(event)
 
 
