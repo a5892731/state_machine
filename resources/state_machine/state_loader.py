@@ -9,6 +9,8 @@ from resources.state_machine.my_states import Initialization, CloseProgram, Test
 
 class States():
     def __init__(self):
+        '''init all your states here
+        this class stores memory of States'''
         self.Initialization = Initialization()
         self.CloseProgram = CloseProgram()
         self.Test1State = Test1State()

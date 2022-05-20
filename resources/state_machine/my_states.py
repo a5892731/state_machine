@@ -19,14 +19,14 @@ class Initialization(InitializationBody):
             self.action()
         else:
             states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
-            return CloseProgram()
+            return states_data.CloseProgram
 
         '''transition conditions'''
         if self.status == "GO TO TEST1":
-            return Test1State()
+            return states_data.Test1State
         else:
             states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)
-            return CloseProgram()
+            return states_data.CloseProgram
 
 class CloseProgram(CloseProgramBody):
     def on_event(self, event, states_data):
@@ -45,17 +45,18 @@ class Test1State(Test1StateBody):
             self.action()
         else:
             states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
-            return CloseProgram()
+            return states_data.CloseProgram
 
         '''transition conditions'''
         if self.status == "GO TO TEST1":
-            return Test1State()
+            return states_data.Test1State
         elif self.status == "GO TO TEST2":
+            '''clear data before transition'''
             states_data.Test1State = Test1State()
-            return Test2State()
+            return states_data.Test2State
         else:
             states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)
-            return CloseProgram()
+            return states_data.CloseProgram
 
 class Test2State(Test2StateBody):
     def on_event(self, event, states_data):
@@ -67,15 +68,15 @@ class Test2State(Test2StateBody):
             self.action()
         else:
             states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
-            return CloseProgram()
+            return states_data.CloseProgram
 
         '''transition conditions'''
         if self.status == "GO TO TEST1":
             '''clear data before transition'''
             states_data.Test2State = Test2State()
-            return Test1State()
+            return states_data.Test1State
         elif self.status == "GO TO TEST2":
-            return Test2State()
+            return states_data.Test2State
         else:
             states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)
-            return CloseProgram()
+            return states_data.CloseProgram
