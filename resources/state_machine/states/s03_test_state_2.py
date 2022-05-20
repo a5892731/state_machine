@@ -12,9 +12,7 @@ class Test2StateBody(object):
 
     def action(self):
         print(self)
-        self.state_loop()
 
-    def state_loop(self):
         self.counter += 1
         print(self.counter)
         sleep(0.5)
