@@ -10,48 +10,72 @@ from resources.state_machine.states.s02_test_state_1 import Test1StateBody
 from resources.state_machine.states.s03_test_state_2 import Test2StateBody
 
 class Initialization(InitializationBody):
-    def on_event(self, event):
+    def on_event(self, event, states_data):
+        '''import memory from States class'''
+        self = states_data.Initialization
+
+        '''control_word'''
         if event == 'device_locked':
             self.action()
         else:
-            self.status = "error"
+            states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
+            return CloseProgram()
 
+        '''transition conditions'''
         if self.status == "GO TO TEST1":
             return Test1State()
         else:
-            info = ">>> Info: transition error in {} state".format(self)
-            return CloseProgram(info)
+            states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)
+            return CloseProgram()
 
 class CloseProgram(CloseProgramBody):
-    def on_event(self, event):
+    def on_event(self, event, states_data):
+        '''import memory from States class'''
+        self = states_data.CloseProgram
+
         self.action()
 
 class Test1State(Test1StateBody):
-    def on_event(self, event):
+    def on_event(self, event, states_data):
+        '''import memory from States class'''
+        self = states_data.Test1State
+
+        '''control_word'''
         if event == 'device_locked':
             self.action()
         else:
-            self.status = "error"
+            states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
+            return CloseProgram()
 
+        '''transition conditions'''
         if self.status == "GO TO TEST1":
             return Test1State()
         elif self.status == "GO TO TEST2":
+            states_data.Test1State = Test1State()
             return Test2State()
         else:
-            info = ">>> Info: transition error in {} state".format(self)
-            return CloseProgram(info)
+            states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)
+            return CloseProgram()
 
 class Test2State(Test2StateBody):
-    def on_event(self, event):
+    def on_event(self, event, states_data):
+        '''import memory from States class'''
+        self = states_data.Test2State
+
+        '''control_word'''
         if event == 'device_locked':
             self.action()
         else:
-            self.status = "error"
+            states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
+            return CloseProgram()
 
+        '''transition conditions'''
         if self.status == "GO TO TEST1":
+            '''clear data before transition'''
+            states_data.Test2State = Test2State()
             return Test1State()
         elif self.status == "GO TO TEST2":
             return Test2State()
         else:
-            info = ">>> Info: transition error in {} state".format(self)
-            return CloseProgram(info)
+            states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)
+            return CloseProgram()

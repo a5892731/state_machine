@@ -1,10 +1,10 @@
 class InitializationBody(object):
-
     def __init__(self,):
         """
         We define a state object which provides some utility functions for the
         individual states within the state machine.
         """
+
         self.status = None
 
     def action(self):
