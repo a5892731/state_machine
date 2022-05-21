@@ -10,7 +10,7 @@ class Test1StateBody(object):
         self.counter = 0
         self.next_state = self.__class__.__name__
 
-    def action(self):
+    def run_state(self):
 
         self.counter += 1
         print("Output: {}".format(self.counter))

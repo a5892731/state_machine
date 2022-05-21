@@ -19,7 +19,7 @@ class States():
         self.Test2State = Test2State()
 
 
-class StateLoader(object): #in Karen project is a SimpleDevice class
+class StateLoader(object): #in Karen project this is a SimpleDevice class
     """
     A simple state machine that mimics the functionality of a device from a
     high level.
@@ -27,9 +27,9 @@ class StateLoader(object): #in Karen project is a SimpleDevice class
 
     def __init__(self):
         """ Initialize the components. """
-
-        # Start with a default state.
+        # Initialize all states for memory storage purposes
         self.states_data = States()
+        # Select an initial state
         self.state = self.states_data.Initialization
 
     def on_event(self, event):
@@ -38,7 +38,7 @@ class StateLoader(object): #in Karen project is a SimpleDevice class
         delegated to the given states which then handle the event. The result is
         then assigned as the new state.
         """
-        # save down the name of the currently called state
+        # Save down the name of the currently called state
         self.states_data.current_state = self.state.__class__.__name__
         print(">>> currently called state: {}".format(self.states_data.current_state)) # only for testing purposes
 

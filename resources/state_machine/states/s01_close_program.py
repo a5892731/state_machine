@@ -10,7 +10,7 @@ class CloseProgramBody(object):
         self.next_state = None
         self.info = "info"
 
-    def action(self):
+    def run_state(self):
         print(self.info)
         quit()
 

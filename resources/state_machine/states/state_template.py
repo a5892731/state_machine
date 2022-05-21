@@ -11,7 +11,7 @@ class State(object):
         """
         self.next_state = self.__class__.__name__
 
-    def on_event(self, event):
+    def run_state(self, event):
         """
         Handle events that are delegated to this State.
         """

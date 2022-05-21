@@ -7,7 +7,7 @@ class InitializationBody(object):
 
         self.next_state = self.__class__.__name__
 
-    def action(self):
+    def run_state(self):
         self.next_state = "Test1State"
 
 

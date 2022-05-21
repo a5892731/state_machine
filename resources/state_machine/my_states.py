@@ -16,7 +16,8 @@ class Initialization(InitializationBody):
 
         '''control_word'''
         if event == 'device_locked':
-            self.action()
+            '''run your functions in this state'''
+            self.run_state()
         else:
             states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
             return states_data.CloseProgram
@@ -32,8 +33,8 @@ class CloseProgram(CloseProgramBody):
     def on_event(self, event, states_data):
         '''import memory from States class'''
         self = states_data.CloseProgram
-
-        self.action()
+        '''run your functions in this state'''
+        self.run_state()
 
 class Test1State(Test1StateBody):
     def on_event(self, event, states_data):
@@ -42,7 +43,8 @@ class Test1State(Test1StateBody):
 
         '''control_word'''
         if event == 'device_locked':
-            self.action()
+            '''run your functions in this state'''
+            self.run_state()
         else:
             states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
             return states_data.CloseProgram
@@ -65,7 +67,8 @@ class Test2State(Test2StateBody):
 
         '''control_word'''
         if event == 'device_locked':
-            self.action()
+            '''run your functions in this state'''
+            self.run_state()
         else:
             states_data.CloseProgram.info = ">>> Info: device unlocked in {} state".format(self)
             return states_data.CloseProgram
