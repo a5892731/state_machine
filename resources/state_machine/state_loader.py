@@ -9,6 +9,8 @@ from resources.state_machine.my_states import Initialization, CloseProgram, Test
 
 class States():
     def __init__(self):
+        '''information variables'''
+        self.current_state = None
         '''init all your states here
         this class stores memory of States'''
         self.Initialization = Initialization()
@@ -36,7 +38,9 @@ class StateLoader(object): #in Karen project is a SimpleDevice class
         delegated to the given states which then handle the event. The result is
         then assigned as the new state.
         """
-        #
+        # save down the name of the currently called state
+        self.states_data.current_state = self.state.__class__.__name__
+        print(">>> currently called state: {}".format(self.states_data.current_state)) # only for testing purposes
 
         # The next state will be the result of the on_event function.
         self.state = self.state.on_event(event=event, states_data=self.states_data)

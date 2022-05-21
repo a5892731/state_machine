@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc2ede8-032b-4831-aef4-0b5bd18e9501" name="Default Changelist" comment="..." />
+    <list default="true" id="0cc2ede8-032b-4831-aef4-0b5bd18e9501" name="Default Changelist" comment="...">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/state_machine/my_states.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/state_machine/my_states.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/state_machine/state_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/state_machine/state_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/state_machine/states/s00_initialization.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/state_machine/states/s00_initialization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/state_machine/states/s01_close_program.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/state_machine/states/s01_close_program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/state_machine/states/s02_test_state_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/state_machine/states/s02_test_state_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/state_machine/states/s03_test_state_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/state_machine/states/s03_test_state_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/state_machine/states/state_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/state_machine/states/state_template.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653138377350</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="...">
+      <created>1653138784323</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653138784323</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +110,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="..." />
@@ -104,26 +121,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1653137790923" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1653138275704">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1653140352168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653138275704" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1653138275704">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653140352168" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1653140352168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1653138275704" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1653138275704">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1653140352168" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1653140352168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1653138275704" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1653138275704">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1653140352168" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1653140352168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1653138275704" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1653138419404">
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1653140352168" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1653138987936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1653138419404" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1653138987936" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1653138332092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

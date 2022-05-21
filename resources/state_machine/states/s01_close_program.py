@@ -7,10 +7,10 @@ class CloseProgramBody(object):
         We define a state object which provides some utility functions for the
         individual states within the state machine.
         """
+        self.next_state = None
         self.info = "info"
 
     def action(self):
-        print(self)
         print(self.info)
         quit()
 

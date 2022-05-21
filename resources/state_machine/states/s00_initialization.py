@@ -5,11 +5,10 @@ class InitializationBody(object):
         individual states within the state machine.
         """
 
-        self.status = None
+        self.next_state = self.__class__.__name__
 
     def action(self):
-        print(self)
-        self.status = "GO TO TEST1"
+        self.next_state = "Test1State"
 
 
     def __repr__(self):

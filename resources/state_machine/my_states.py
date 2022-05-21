@@ -22,7 +22,7 @@ class Initialization(InitializationBody):
             return states_data.CloseProgram
 
         '''transition conditions'''
-        if self.status == "GO TO TEST1":
+        if self.next_state == "Test1State":
             return states_data.Test1State
         else:
             states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)
@@ -48,9 +48,9 @@ class Test1State(Test1StateBody):
             return states_data.CloseProgram
 
         '''transition conditions'''
-        if self.status == "GO TO TEST1":
+        if self.next_state == "Test1State":
             return states_data.Test1State
-        elif self.status == "GO TO TEST2":
+        elif self.next_state == "Test2State":
             '''clear data before transition'''
             states_data.Test1State = Test1State()
             return states_data.Test2State
@@ -71,11 +71,11 @@ class Test2State(Test2StateBody):
             return states_data.CloseProgram
 
         '''transition conditions'''
-        if self.status == "GO TO TEST1":
+        if self.next_state == "Test1State":
             '''clear data before transition'''
             states_data.Test2State = Test2State()
             return states_data.Test1State
-        elif self.status == "GO TO TEST2":
+        elif self.next_state == "Test2State":
             return states_data.Test2State
         else:
             states_data.CloseProgram.info = ">>> Info: transition error in {} state".format(self)

@@ -5,7 +5,11 @@ class State(object):
     """
 
     def __init__(self):
-        print('Processing current state:', str(self))
+        """
+        We define a state object which provides some utility functions for the
+        individual states within the state machine.
+        """
+        self.next_state = self.__class__.__name__
 
     def on_event(self, event):
         """

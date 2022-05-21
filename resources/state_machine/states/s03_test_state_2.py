@@ -8,16 +8,15 @@ class Test2StateBody(object):
         individual states within the state machine.
         """
         self.counter = 0
-        self.status = "GO TO TEST2"
+        self.next_state = self.__class__.__name__
 
     def action(self):
-        print(self)
 
         self.counter += 1
-        print(self.counter)
+        print("Output: {}".format(self.counter))
         sleep(0.5)
         if self.counter >= 3:
-            self.status = "GO TO TEST1"
+            self.next_state = "Test1State"
 
     def __repr__(self):
         """
